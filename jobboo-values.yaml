@@ -1,6 +1,6 @@
 image:
   repository: akidev9777/jobboo
-  tag: "87716cba91a029e9b0c6dbbb7233c5b5e65e3b8b"
+  tag: "ac594b836be98b8f5e8db7537d79d280f41ca76f"
 mysql:
   host: jobboo-db-mysql-svc
   port: "3306"
