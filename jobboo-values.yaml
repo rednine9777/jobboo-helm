@@ -1,0 +1,9 @@
+image:
+  repository: akidev9777/jobboo
+  tag: "latest"
+mysql:
+  host: jobboo-db-mysql-svc
+  port: "3306"
+  rootPassword: "1111"
+  database: "myappdb"
+  username: "root"

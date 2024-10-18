@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jobboo-web-deploy
+  labels:
+    app: jodboo-web-deploy
+spec:
+  selector:
+    matchLabels:
+      app: jobboo-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jobboo-web
+    spec:
+      containers:
+      - name: c-jobboo-web
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: docker
+        envFrom:
+        - secretRef:
+            name: mysql-secret
+
